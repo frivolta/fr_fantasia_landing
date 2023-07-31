@@ -19,13 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="flex justify-between p-8">
+        <header className="flex justify-center align-middle p-8">
           <LogoFr />
-          <div>
-            <MainButton text="App Store" iconUrl="apple.svg" />
-          </div>
         </header>
-        <section className="">{children}</section>
+        <section className="container px-6">{children}</section>
       </body>
     </html>
   );
