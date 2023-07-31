@@ -1,0 +1,25 @@
+.Head{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 1300px;
+    overflow: visible;
+    padding: 400px 0 300px;
+    position: relative;
+    width: 100%;
+}
+.HeadContent{
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 32px;
+    height: min-content;
+    justify-content: center;
+    overflow: visible;
+    padding: 0 120px;
+    position: relative;
+    width: 100%;
+}

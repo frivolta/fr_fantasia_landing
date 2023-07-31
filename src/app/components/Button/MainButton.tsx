@@ -1,6 +1,5 @@
 import MainButtonStyle from "./MainButton.module.scss";
 import Image from "next/image";
-import classnames from "classnames";
 
 export interface MainButtonProps {
   text: string;
