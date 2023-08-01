@@ -4,7 +4,7 @@ import Image from "next/image";
 Image;
 const Head = () => {
   return (
-    <div className="py-32">
+    <div className="pt-32 pb-12">
       <div className="pb-8">
         <Image
           src="fantasia_royal.svg"
