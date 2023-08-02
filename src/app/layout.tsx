@@ -23,20 +23,20 @@ export default function RootLayout({
           <LogoFr />
         </header>
         <section className="container px-6">{children}</section>
-      </body>
-      <footer className="mt-24 px-8">
-        <div className="border-t border-t-red-500 w-full pt-4 px-4 text-primaryDark">
-          <div className="flex text-primaryDark">
-            <Image
-              src="heart.svg"
-              width={18}
-              height={18}
-              alt="Made by Filippo Rivolta"
-            />
-            <p>Filippo Rivolta 2023</p>
+        <footer className="mt-24 px-8">
+          <div className="border-t border-t-red-500 w-full pt-4 px-4 text-primaryDark">
+            <div className="flex text-primaryDark">
+              <Image
+                src="heart.svg"
+                width={18}
+                height={18}
+                alt="Made by Filippo Rivolta"
+              />
+              <p>Filippo Rivolta 2023</p>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </body>
     </html>
   );
 }

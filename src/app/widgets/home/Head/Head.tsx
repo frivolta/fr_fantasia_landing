@@ -1,8 +1,9 @@
 import { FadeIn } from "@/app/components/Animations/fadeIn";
 import MainButton from "@/app/components/Button/MainButton";
 import Image from "next/image";
+import { forwardRef } from "react";
 
-const Head = () => {
+const Head = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <>
       <FadeIn>
@@ -26,7 +27,7 @@ const Head = () => {
         </div>
       </FadeIn>
       <div className="pt-8 flex justify-start">
-        <div className="flex justify-start">
+        <div className="flex justify-start" ref={ref}>
           <FadeIn>
             <MainButton text="App Store" iconUrl="apple.svg" />
           </FadeIn>
@@ -34,6 +35,6 @@ const Head = () => {
       </div>
     </>
   );
-};
+});
 
 export default Head;

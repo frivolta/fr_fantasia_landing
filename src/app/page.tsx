@@ -3,69 +3,20 @@ import Head from "@/app/widgets/home/Head/Head";
 import MainPhone from "./widgets/home/MainPhone/MainPhone";
 import { ImageBlock } from "./components/ImageBlock/ImageBlock";
 import { PlainTextBlock } from "./components/PlainTextBlock/PlainTextBlock";
-import { useRef } from "react";
-import { FadeIn } from "@/app/components/Animations/fadeIn";
-import MainButton from "@/app/components/Button/MainButton";
 import Image from "next/image";
-import {
-  useScroll,
-  useTransform,
-  useViewportScroll,
-  useSpring,
-  motion,
-  easeIn,
-  mirrorEasing,
-} from "framer-motion";
+import { motion } from "framer-motion";
+import { useMainPhoneAnimation } from "@/hooks/animations/useMainPhoneAnimation";
+import { FadeIn } from "./components/Animations/fadeIn";
 export default function Home() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-  });
-  const scaleTransform = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
-  const scale = useSpring(scaleTransform, {
-    stiffness: 120,
-    damping: 30,
-    restDelta: 0.001,
-  });
+  const { mainPhoneAnimationRef, mainPhoneAnimationScale } =
+    useMainPhoneAnimation();
 
-  //const pathTransform = useTransform(scrollYProgress, [0, 1], [0, 10]);
-  /*const pathLength = useSpring(pathTransform, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });*/
   return (
     <main className="flex flex-col justify-between">
       <div className="pt-32">
-        <FadeIn>
-          <div className="pb-8">
-            <Image
-              src="fantasia_royal.svg"
-              alt="Filippo Rivolta Fantasia Taylored Dreams"
-              width={194}
-              height={57}
-            />
-          </div>
-        </FadeIn>
-        <FadeIn>
-          <div>
-            <h1 className="text-primary">
-              From Blueprint to Build.{" "}
-              <span className="text-primaryDark">
-                The Evolution and lifecycle of a Creative Endeavor.
-              </span>
-            </h1>
-          </div>
-        </FadeIn>
-        <div className="pt-8 flex justify-start" ref={ref}>
-          <div className="flex justify-start">
-            <FadeIn>
-              <MainButton text="App Store" iconUrl="apple.svg" />
-            </FadeIn>
-          </div>
-        </div>
+        <Head ref={mainPhoneAnimationRef} />
       </div>
-      <motion.div style={{ scale }}>
+      <motion.div style={{ scale: mainPhoneAnimationScale }}>
         <div className="relative block pt-12">
           <MainPhone />
         </div>
@@ -96,13 +47,15 @@ export default function Home() {
       </div>
       <section className="grid grid-cols-1 mt-24">
         <div className="imagesection">
-          <Image
-            src="/main_phone.png"
-            width={313}
-            height={568}
-            style={{ width: "100%", height: "auto" }}
-            alt="Filippo Rivolta Fantasia Iphone"
-          />
+          <FadeIn>
+            <Image
+              src="/main_phone.png"
+              width={313}
+              height={568}
+              style={{ width: "100%", height: "auto" }}
+              alt="Filippo Rivolta Fantasia Iphone"
+            />
+          </FadeIn>
         </div>
         <div className="text-section mt-12">
           <Head />
