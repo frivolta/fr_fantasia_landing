@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Head = () => {
   return (
-    <div className="pt-32 pb-12">
+    <>
       <div className="pb-8">
         <Image
           src="fantasia_royal.svg"
@@ -25,7 +25,7 @@ const Head = () => {
           <MainButton text="App Store" iconUrl="apple.svg" />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
