@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "../../styles/global.scss";
 import LogoFr from "./components/LogoFR";
+import Image from "next/image";
 const inter = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -23,6 +24,19 @@ export default function RootLayout({
         </header>
         <section className="container px-6">{children}</section>
       </body>
+      <footer className="mt-24 px-8">
+        <div className="border-t border-t-red-500 w-full pt-4 px-4 text-primaryDark">
+          <div className="flex text-primaryDark">
+            <Image
+              src="heart.svg"
+              width={18}
+              height={18}
+              alt="Made by Filippo Rivolta"
+            />
+            <p>Filippo Rivolta 2023</p>
+          </div>
+        </div>
+      </footer>
     </html>
   );
 }
