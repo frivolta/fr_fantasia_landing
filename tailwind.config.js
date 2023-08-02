@@ -17,7 +17,8 @@ module.exports = {
       dark: "#000000",
       primary: "#e7e7e7",
       primaryDark: "#878787",
+      secondary: "#262626",
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };

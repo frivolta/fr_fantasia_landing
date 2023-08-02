@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "../../styles/global.scss";
 import LogoFr from "./components/LogoFR";
-import MainButton from "./components/Button/MainButton";
 const inter = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

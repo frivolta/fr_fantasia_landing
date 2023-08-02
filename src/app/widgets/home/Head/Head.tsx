@@ -1,7 +1,6 @@
 import MainButton from "@/app/components/Button/MainButton";
 import Image from "next/image";
 
-Image;
 const Head = () => {
   return (
     <div className="pt-32 pb-12">
