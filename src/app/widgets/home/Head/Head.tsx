@@ -36,5 +36,5 @@ const Head = forwardRef<HTMLDivElement>((_, ref) => {
     </>
   );
 });
-
+Head.displayName = "Head";
 export default Head;
