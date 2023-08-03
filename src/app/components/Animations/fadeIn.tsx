@@ -6,8 +6,8 @@ export interface FadeInProps {
   children: any;
 }
 const fadeInVariants = {
-  visible: { opacity: 1, scale: 1 },
-  hidden: { opacity: 0, scale: 1 },
+  v: { opacity: 1 },
+  h: { opacity: 0 },
 };
 
 const transitionStyle = {
@@ -19,7 +19,7 @@ export const FadeIn = ({ children }: FadeInProps) => {
   return (
     <motion.div
       ref={ref}
-      animate={isInView ? "visible" : "hidden"}
+      animate={isInView ? "v" : "h"}
       variants={fadeInVariants}
       transition={transitionStyle}
     >
