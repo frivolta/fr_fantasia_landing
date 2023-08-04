@@ -7,6 +7,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useMainPhoneAnimation } from "@/hooks/animations/useMainPhoneAnimation";
 import { FadeIn } from "./components/Animations/fadeIn";
+import { StickyImageBlock } from "./components/StickyImageBox/StickyImageBlock";
 export default function Home() {
   const { mainPhoneAnimationRef, mainPhoneAnimationScale } =
     useMainPhoneAnimation();
@@ -21,6 +22,9 @@ export default function Home() {
           <MainPhone />
         </div>
       </motion.div>
+      <div className="mt-24">
+        <StickyImageBlock />
+      </div>
       <div className="mt-8">
         <ImageBlock />
       </div>

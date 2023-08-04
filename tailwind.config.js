@@ -12,6 +12,13 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      container: (theme) => ({
+        // To center containers by default
+        center: true,
+
+        // To add horizontal padding by default
+        padding: theme("spacing.4"),
+      }),
     },
     colors: {
       dark: "#000000",
