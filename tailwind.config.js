@@ -16,8 +16,12 @@ module.exports = {
         // To center containers by default
         center: true,
 
-        // To add horizontal padding by default
-        padding: theme("spacing.4"),
+        padding: {
+          DEFAULT: theme("spacing.4"),
+          sm: theme("spacing.5"),
+          lg: theme("spacing.6"),
+          xl: theme("81rem"),
+        },
       }),
     },
     colors: {

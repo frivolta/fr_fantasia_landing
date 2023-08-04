@@ -17,11 +17,11 @@ export default function Home() {
       <div className="pt-32 lg:pt-24">
         <Head ref={mainPhoneAnimationRef} />
       </div>
-      <motion.div style={{ scale: mainPhoneAnimationScale }}>
+      {/* <motion.div style={{ scale: mainPhoneAnimationScale }}>
         <div className="relative block pt-12 lg:px-12">
           <MainPhone />
         </div>
-      </motion.div>
+  </motion.div>
       <div className="mt-24">
         <StickyImageBlock />
       </div>
@@ -64,7 +64,7 @@ export default function Home() {
         <div className="text-section mt-12">
           <Head />
         </div>
-      </section>
+      </section>*/}
     </main>
   );
 }

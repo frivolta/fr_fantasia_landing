@@ -2,10 +2,10 @@ import { FadeIn } from "@/app/components/Animations/fadeIn";
 import MainButton from "@/app/components/Button/MainButton";
 import Image from "next/image";
 import { forwardRef } from "react";
-
+import styles from "./Head.module.scss";
 const Head = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <div>
+    <div className={styles.Head}>
       <FadeIn>
         <div className="pb-8">
           <Image
@@ -26,7 +26,7 @@ const Head = forwardRef<HTMLDivElement>((_, ref) => {
           </h1>
         </div>
       </FadeIn>
-      <div className="pt-8 flex justify-start">
+      <div className="pt-8 justify-start flex lg:hidden">
         <div className="flex justify-start" ref={ref}>
           <FadeIn>
             <MainButton text="App Store" iconUrl="apple.svg" />

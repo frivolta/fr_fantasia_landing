@@ -1,7 +1,7 @@
 @import "variables";
 
 $xl: 1200px;
-$md: 900px;
+$md: 800px;
 
 body,
 html {
@@ -44,4 +44,32 @@ p {
   font-size: 14px;
   line-height: 24px;
   font-weight: 500;
+}
+
+.custom-container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  max-width: 420px;
+  @media (min-width: 640px) {
+      max-width: 640px;
+      padding-right: 1.25rem;
+      padding-left: 1.25rem;
+  }
+  @media (min-width: 768px) {
+      max-width: 768px;
+  }
+  @media (min-width: 1024px) {
+      max-width: 1024px;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+  }
+  @media (min-width: 1280px) {
+      max-width: 1280px;
+  }
+  @media (min-width: 1536px) {
+      max-width: 1300px;
+  }
 }
