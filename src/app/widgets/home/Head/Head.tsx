@@ -5,7 +5,7 @@ import { forwardRef } from "react";
 
 const Head = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <>
+    <div>
       <FadeIn>
         <div className="pb-8">
           <Image
@@ -33,7 +33,7 @@ const Head = forwardRef<HTMLDivElement>((_, ref) => {
           </FadeIn>
         </div>
       </div>
-    </>
+    </div>
   );
 });
 Head.displayName = "Head";

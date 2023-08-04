@@ -4,6 +4,7 @@ import { Inter_Tight } from "next/font/google";
 import "../../styles/global.scss";
 import LogoFr from "./components/LogoFR";
 import Image from "next/image";
+import MainButton from "./components/Button/MainButton";
 const inter = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,10 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="flex justify-center align-middle p-8">
+        <header className="flex justify-center lg:justify-between align-middle p-8">
           <LogoFr />
+          <div className="hidden lg:block">
+            <MainButton text="App Store" iconUrl="apple.svg" />
+          </div>
         </header>
-        <section className="container px-6">{children}</section>
+        <section className="container px-6 lg:px-28 lg:m-0">{children}</section>
         <footer className="mt-24 px-8">
           <div className="border-t border-t-red-500 w-full pt-4 px-4 text-primaryDark">
             <div className="flex text-primaryDark">

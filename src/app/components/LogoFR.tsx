@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const LogoFr = () => (
-  <div className="fixed bg-dark rounded-lg px-12 py-2 z-10">
+  <div className="fixed md:relative bg-dark md:bg-transparent rounded-lg px-12 md:px-0 py-2 md:py-0 z-10">
     <Link href="/">
       <Image
         src={"LogoFr.svg"}

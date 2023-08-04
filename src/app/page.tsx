@@ -13,11 +13,11 @@ export default function Home() {
 
   return (
     <main className="flex flex-col justify-between">
-      <div className="pt-32">
+      <div className="pt-32 lg:pt-24">
         <Head ref={mainPhoneAnimationRef} />
       </div>
       <motion.div style={{ scale: mainPhoneAnimationScale }}>
-        <div className="relative block pt-12">
+        <div className="relative block pt-12 lg:px-12">
           <MainPhone />
         </div>
       </motion.div>
@@ -31,7 +31,7 @@ export default function Home() {
         <ImageBlock />
       </div>
       <div className="mt-24">
-        <div className="textblock text-primary">
+        <div className="textblock text-primary lg:mb-20">
           <h1 className="text-primary">
             From Blueprint to Build.{" "}
             <span className="text-primaryDark">
