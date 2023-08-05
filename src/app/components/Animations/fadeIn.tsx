@@ -1,6 +1,6 @@
 "use client";
-import { useAnimation, motion, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export interface FadeInProps {
   children: any;

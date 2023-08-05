@@ -8,24 +8,27 @@ import { motion } from "framer-motion";
 import { useMainPhoneAnimation } from "@/hooks/animations/useMainPhoneAnimation";
 import { FadeIn } from "./components/Animations/fadeIn";
 import { StickyImageBlock } from "./components/StickyImageBox/StickyImageBlock";
+import { Mockup } from "./components/Mockup/Mockup";
+import { useRef } from "react";
 export default function Home() {
-  const { mainPhoneAnimationRef, mainPhoneAnimationScale } =
-    useMainPhoneAnimation();
+  const initiMockupAnimationRef = useRef<HTMLDivElement>(null);
 
   return (
-    <main className="flex flex-col justify-between">
+    <main
+      className="flex flex-col justify-between"
+      ref={initiMockupAnimationRef}
+    >
+      {/*Header Section*/}
       <div className="pt-32 lg:pt-24">
-        <Head ref={mainPhoneAnimationRef} />
+        <Head />
       </div>
-      {/* <motion.div style={{ scale: mainPhoneAnimationScale }}>
-        <div className="relative block pt-12 lg:px-12">
-          <MainPhone />
-        </div>
-  </motion.div>
-      <div className="mt-24">
-        <StickyImageBlock />
+      {/*Main Mockup Section*/}
+      <div>
+        <Mockup ref={initiMockupAnimationRef} />
       </div>
+      {/*
       <div className="mt-8">
+      <StickyImageBlock />
         <ImageBlock />
       </div>
       <div className="mt-24">

@@ -1,0 +1,39 @@
+@use "../../../../styles/variables" as v;
+.Mockup{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: min-content;
+    margin-top: 24px;
+    @media (min-width: v.$cmd) {
+        margin-top: 40px;
+    }
+    @media (min-width: v.$cxl) {
+        margin-top: 0;
+    }
+    &__Container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      @media (min-width: v.$cmd) {
+        padding: 0 80px;
+    }
+    @media (min-width: v.$cxl) {
+        padding: 0 120px;
+    }
+    }
+    &__Image{
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        object-position: center;
+        object-fit: cover;
+        image-rendering: auto;
+    }
+}

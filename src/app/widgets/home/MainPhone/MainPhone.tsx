@@ -5,9 +5,8 @@ const MainPhone = () => {
   return (
     <Image
       src="/main_phone.png"
-      width={313}
-      height={568}
-      style={{ width: "100%", height: "auto" }}
+      fill
+      style={{ objectFit: "contain" }}
       alt="Filippo Rivolta Fantasia Iphone"
     />
   );
