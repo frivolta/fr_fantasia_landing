@@ -1,0 +1,23 @@
+@use "../../../../../styles/variables" as v;
+
+.StickyImageBlock{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 2rem;
+    &__Alt{
+        text-align: left;
+    }
+    &__Image{
+        width: 100%;
+    }
+    //tt
+    padding: 0 120px 300px;
+    @media (min-width: v.$cmd) {
+        //tt
+        padding: 0 40px;
+    }
+    @media (min-width: v.$cxl) {
+        padding: 0 120px 300px;
+    }
+}

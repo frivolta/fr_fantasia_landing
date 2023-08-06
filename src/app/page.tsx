@@ -7,7 +7,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useMainPhoneAnimation } from "@/hooks/animations/useMainPhoneAnimation";
 import { FadeIn } from "./components/Animations/fadeIn";
-import { StickyImageBlock } from "./components/StickyImageBox/StickyImageBlock";
+import { StickyImageBlock } from "./widgets/home/StickyImageBox/StickyImageBlock";
 import { Mockup } from "./components/Mockup/Mockup";
 import { useRef } from "react";
 export default function Home() {
@@ -26,16 +26,14 @@ export default function Home() {
       <div>
         <Mockup ref={initiMockupAnimationRef} />
       </div>
-      {/*
       <div className="mt-8">
-      <StickyImageBlock />
-        <ImageBlock />
+        <StickyImageBlock />
       </div>
-      <div className="mt-24">
-        <ImageBlock />
+      <div className="mt-8">
+        <StickyImageBlock alt />
       </div>
-      <div className="mt-24">
-        <ImageBlock />
+      <div className="mt-8">
+        <StickyImageBlock />
       </div>
       <div className="mt-24">
         <div className="textblock text-primary lg:mb-20">
@@ -51,6 +49,13 @@ export default function Home() {
         <PlainTextBlock />
         <PlainTextBlock />
         <PlainTextBlock />
+      </div>
+      {/*
+      <div className="mt-24">
+        <ImageBlock />
+      </div>
+      <div className="mt-24">
+        <ImageBlock />
       </div>
       <section className="grid grid-cols-1 mt-24">
         <div className="imagesection">
