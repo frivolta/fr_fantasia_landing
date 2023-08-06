@@ -29,10 +29,10 @@ export default function Home() {
       <div className="mt-8">
         <StickyImageBlock />
       </div>
-      <div className="mt-8">
+      <div className="mt-8 md:mt-32">
         <StickyImageBlock alt />
       </div>
-      <div className="mt-8">
+      <div className="mt-8 md:mt-32">
         <StickyImageBlock />
       </div>
       <div className="mt-24">

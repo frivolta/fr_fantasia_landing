@@ -1,21 +1,26 @@
 @use "../../../../../styles/variables" as v;
 
 .StickyImageBlock{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    column-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
     &__Alt{
         text-align: left;
+        flex-direction: column-reverse;
     }
     &__Image{
-        width: 100%;
+        width: 80%;
     }
-    //tt
-    padding: 0 120px 300px;
+
     @media (min-width: v.$cmd) {
-        //tt
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 2rem;
         padding: 0 40px;
+        &__Image{
+            width: 100%;
+        }
     }
     @media (min-width: v.$cxl) {
         padding: 0 120px 300px;
