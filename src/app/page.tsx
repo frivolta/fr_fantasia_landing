@@ -13,42 +13,46 @@ export default function Home() {
       className="flex flex-col justify-between"
       ref={initiMockupAnimationRef}
     >
-      {/*Header Section*/}
-      <div className="pt-32 lg:pt-24">
-        <Head />
-      </div>
-      {/*Main Mockup Section*/}
-      <div>
-        <Mockup ref={initiMockupAnimationRef} />
-      </div>
-      {/*Sticky Section*/}
-      <div className="mt-8">
-        <StickyImageBlock />
-      </div>
-      <div className="mt-8 md:mt-32">
-        <StickyImageBlock alt />
-      </div>
-      <div className="mt-8 md:mt-32">
-        <StickyImageBlock />
-      </div>
-      {/*Secondary Title Section*/}
-      <div className="mt-24">
-        <Spacing>
-          <div className="textblock text-primary lg:mb-20">
-            <h1 className="text-primary">
-              From Blueprint to Build.{" "}
-              <span className="text-primaryDark">
-                The Evolution and lifecycle of a Creative Endeavor.
-              </span>
-            </h1>
-          </div>
-          {/*Plain Text Blocks Section*/}
-          <PlainTextBlock />
-          <PlainTextBlock />
-          <PlainTextBlock />
-          <PlainTextBlock />
-          <PlainTextBlock />
-        </Spacing>
+      <div className="radial-background-contrast" />
+      <div className="radial-background-colorful" />
+      <div className="z-50">
+        {/*Header Section*/}
+        <div className="pt-32 lg:pt-24">
+          <Head />
+        </div>
+        {/*Main Mockup Section*/}
+        <div>
+          <Mockup ref={initiMockupAnimationRef} />
+        </div>
+        {/*Sticky Section*/}
+        <div className="mt-8">
+          <StickyImageBlock />
+        </div>
+        <div className="mt-8 md:mt-32">
+          <StickyImageBlock alt />
+        </div>
+        <div className="mt-8 md:mt-32">
+          <StickyImageBlock />
+        </div>
+        {/*Secondary Title Section*/}
+        <div className="mt-24">
+          <Spacing>
+            <div className="textblock text-primary lg:mb-20">
+              <h1 className="text-primary">
+                From Blueprint to Build.{" "}
+                <span className="text-primaryDark">
+                  The Evolution and lifecycle of a Creative Endeavor.
+                </span>
+              </h1>
+            </div>
+            {/*Plain Text Blocks Section*/}
+            <PlainTextBlock />
+            <PlainTextBlock />
+            <PlainTextBlock />
+            <PlainTextBlock />
+            <PlainTextBlock />
+          </Spacing>
+        </div>
       </div>
     </main>
   );

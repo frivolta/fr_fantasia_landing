@@ -74,3 +74,44 @@ p {
       max-width: 1300px;
   }
 }
+
+.radial-background-default{
+  background: radial-gradient(39% 36.2% at 31.8% 88.7%, rgba(207, 67, 255, 0.6) 0%, rgba(103, 86, 255, 0) 100%);
+  opacity: 1;
+  transform: none;
+  transform-origin: 50% 50% 0px;
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1;
+}
+.radial-background-colorful{
+  background: radial-gradient(112.79999999999998% 100% at -3.9% 100%,#b300ff 0%,hsla(212, 100%, 50%, 0.115) 49.80803150067764%,hsla(262, 100%, 67%, 0.258) 74.08234947205608%,hsl(287,100%,50%) 99.95393495930529%);
+  opacity: 1;
+  transform: none;
+  transform-origin: 50% 50% 0px;
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 0;
+}
+
+.radial-background-contrast{
+  background: radial-gradient(182.29999999999998% 69% at 50% 8.4%,#000000 0%,rgb(0, 0, 0) 28.345139819430482%,rgba(0, 0, 0, 0.88) 46.39900258832971%,hsla(0,0%,100%,0) 99.95393495930529%);
+  opacity: 1;
+  transform: none;
+  transform-origin: 50% 50% 0px;
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 2;
+}
