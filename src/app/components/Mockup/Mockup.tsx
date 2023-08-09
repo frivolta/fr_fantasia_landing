@@ -33,3 +33,4 @@ export const Mockup = forwardRef<HTMLDivElement, {}>((_, containerRef) => {
     </div>
   );
 });
+Mockup.displayName = "Mockup";
