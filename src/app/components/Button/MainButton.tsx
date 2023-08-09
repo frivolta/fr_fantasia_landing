@@ -5,9 +5,10 @@ export interface MainButtonProps {
   text: string;
   iconUrl: string;
   alt?: boolean;
+  href: string;
 }
 
-const MainButton = ({ text, iconUrl, alt }: MainButtonProps) => {
+const MainButton = ({ text, iconUrl, alt, href }: MainButtonProps) => {
   //if alt prop false then classname is MainButtonPrimary
   //if alt prop true then classname is MainButtonSecondary
   // always MainButton
@@ -18,7 +19,7 @@ const MainButton = ({ text, iconUrl, alt }: MainButtonProps) => {
     [MainButtonStyle.MainButtonSecondary]: alt,
   });
   return (
-    <a className={className}>
+    <a className={className} href={href} target="_blank">
       <Image
         src={iconUrl}
         width={20}

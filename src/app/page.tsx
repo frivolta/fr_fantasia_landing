@@ -10,6 +10,7 @@ import { FadeIn } from "./components/Animations/fadeIn";
 import { StickyImageBlock } from "./widgets/home/StickyImageBox/StickyImageBlock";
 import { Mockup } from "./components/Mockup/Mockup";
 import { useRef } from "react";
+import { Spacing } from "./components/Spacing/Spacing";
 export default function Home() {
   const initiMockupAnimationRef = useRef<HTMLDivElement>(null);
 
@@ -26,6 +27,7 @@ export default function Home() {
       <div>
         <Mockup ref={initiMockupAnimationRef} />
       </div>
+      {/*Sticky Section*/}
       <div className="mt-8">
         <StickyImageBlock />
       </div>
@@ -35,20 +37,24 @@ export default function Home() {
       <div className="mt-8 md:mt-32">
         <StickyImageBlock />
       </div>
+      {/*Secondary Title Section*/}
       <div className="mt-24">
-        <div className="textblock text-primary lg:mb-20">
-          <h1 className="text-primary">
-            From Blueprint to Build.{" "}
-            <span className="text-primaryDark">
-              The Evolution and lifecycle of a Creative Endeavor.
-            </span>
-          </h1>
-        </div>
-        <PlainTextBlock />
-        <PlainTextBlock />
-        <PlainTextBlock />
-        <PlainTextBlock />
-        <PlainTextBlock />
+        <Spacing>
+          <div className="textblock text-primary lg:mb-20">
+            <h1 className="text-primary">
+              From Blueprint to Build.{" "}
+              <span className="text-primaryDark">
+                The Evolution and lifecycle of a Creative Endeavor.
+              </span>
+            </h1>
+          </div>
+          {/*Plain Text Blocks Section*/}
+          <PlainTextBlock />
+          <PlainTextBlock />
+          <PlainTextBlock />
+          <PlainTextBlock />
+          <PlainTextBlock />
+        </Spacing>
       </div>
       {/*
       <div className="mt-24">

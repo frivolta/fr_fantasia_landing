@@ -1,0 +1,11 @@
+@use "../../../../styles/variables" as v;
+
+.Spacing {
+  padding: 0 20px;
+  @media (min-width: v.$cmd) {
+    padding: 0 40px;
+  }
+  @media (min-width: v.$cxl) {
+    padding: 0 120px;
+  }
+}

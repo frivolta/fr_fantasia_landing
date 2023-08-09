@@ -1,11 +1,12 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import styles from "./StickyImageBlock.module.scss";
 import { useStickyAnimation } from "./hooks/useStickyAanimation";
 import MainButton from "@/app/components/Button/MainButton";
 import classNames from "classnames";
+import Image from "next/image";
+import { BUTTON_URLS } from "@/consts/urls";
 
 interface StickyImageBlockProps {
   alt?: boolean;
@@ -25,18 +26,24 @@ export const StickyImageBlock = ({ alt }: StickyImageBlockProps) => {
           appeal.
         </h2>
         <div className="flex mt-10 items-start mx-auto gap-4">
-          <MainButton alt text="App Store" iconUrl="appleAlt.svg" />
           <MainButton
+            text={BUTTON_URLS.APP_STORE.label}
+            iconUrl={BUTTON_URLS.APP_STORE.iconAlt}
+            href={BUTTON_URLS.APP_STORE.url}
             alt
-            text="Read Insights"
-            iconUrl="terminal-outlineAlt.svg"
+          />
+          <MainButton
+            text={BUTTON_URLS.NERD_INSIGHTS.label}
+            iconUrl={BUTTON_URLS.NERD_INSIGHTS.iconAlt}
+            href={BUTTON_URLS.NERD_INSIGHTS.url}
+            alt
           />
         </div>
       </div>
     </motion.div>
   );
   const imageBlock = () => (
-    <div>
+    <div className={styles.StickyImageBlock__ImageContainer}>
       <img
         src="/phone.png"
         height={854}

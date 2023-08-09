@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "../../styles/global.scss";
 import LogoFr from "./components/LogoFR";
-import Image from "next/image";
 import MainButton from "./components/Button/MainButton";
+import Footer from "./components/Footer/Footer";
 const inter = Inter_Tight({ subsets: ["latin"] });
+import { BUTTON_URLS } from "@/consts/urls";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,23 +23,22 @@ export default function RootLayout({
       <body className={inter.className}>
         <header className="flex justify-center md:justify-between align-middle p-8 md:p-12">
           <LogoFr />
-          <div className="hidden md:block">
-            <MainButton text="App Store" iconUrl="apple.svg" />
+          <div className="hidden md:flex md:gap-4">
+            <MainButton
+              text={BUTTON_URLS.APP_STORE.label}
+              iconUrl={BUTTON_URLS.APP_STORE.icon}
+              href={BUTTON_URLS.APP_STORE.url}
+            />
+            <MainButton
+              text={BUTTON_URLS.NERD_INSIGHTS.label}
+              iconUrl={BUTTON_URLS.NERD_INSIGHTS.icon}
+              href={BUTTON_URLS.NERD_INSIGHTS.url}
+            />
           </div>
         </header>
         <section className="custom-container">{children}</section>
-        <footer className="mt-24 px-8">
-          <div className="border-t border-t-red-500 w-full pt-4 px-4 text-primaryDark">
-            <div className="flex text-primaryDark">
-              <Image
-                src="heart.svg"
-                width={18}
-                height={18}
-                alt="Made by Filippo Rivolta"
-              />
-              <p>Filippo Rivolta 2023</p>
-            </div>
-          </div>
+        <footer className="mt-24 px-8 mb-4">
+          <Footer />
         </footer>
       </body>
     </html>

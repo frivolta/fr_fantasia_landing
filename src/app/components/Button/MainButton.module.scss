@@ -1,39 +1,42 @@
 @use "../../../../styles/variables" as v;
 
-.MainButton{
-    align-content: center;
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 10px;
-    height: min-content;
-    justify-content: center;
-    overflow: visible;
-    padding: 14px 32px;
-    position: relative;
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 17px;
-    @media (min-width: v.$cmd) {
-        font-size: 18px;
-    }
-    @media (min-width: v.$cxl) {
-    }
+.MainButton {
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: min-content;
+  justify-content: center;
+  overflow: visible;
+  padding: 14px 32px;
+  position: relative;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 17px;
+  height: 52px;
+  max-height: 52px;
+  overflow: hidden;
+  @media (min-width: v.$cmd) {
+    font-size: 18px;
+  }
+  @media (min-width: v.$cxl) {
+  }
 }
 
-.MainButtonPrimary{
-    background-color: white;
-    font-weight: 700;
-    border-radius: 12px;
-    opacity: 1;
+.MainButtonPrimary {
+  background-color: white;
+  font-weight: 700;
+  border-radius: 12px;
+  opacity: 1;
 }
 
-.MainButtonSecondary{
-    background-color: v.$darkAlt;
-    border-radius: 12px;
-    opacity: 1;
-    font-weight: 700;
-    color: v.$primary;
+.MainButtonSecondary {
+  background-color: v.$darkAlt;
+  border-radius: 12px;
+  opacity: 1;
+  font-weight: 700;
+  color: v.$primary;
 }
