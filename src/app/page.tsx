@@ -1,12 +1,6 @@
 "use client";
 import Head from "@/app/widgets/home/Head/Head";
-import MainPhone from "./widgets/home/MainPhone/MainPhone";
-import { ImageBlock } from "./components/ImageBlock/ImageBlock";
 import { PlainTextBlock } from "./components/PlainTextBlock/PlainTextBlock";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { useMainPhoneAnimation } from "@/hooks/animations/useMainPhoneAnimation";
-import { FadeIn } from "./components/Animations/fadeIn";
 import { StickyImageBlock } from "./widgets/home/StickyImageBox/StickyImageBlock";
 import { Mockup } from "./components/Mockup/Mockup";
 import { useRef } from "react";
@@ -56,29 +50,6 @@ export default function Home() {
           <PlainTextBlock />
         </Spacing>
       </div>
-      {/*
-      <div className="mt-24">
-        <ImageBlock />
-      </div>
-      <div className="mt-24">
-        <ImageBlock />
-      </div>
-      <section className="grid grid-cols-1 mt-24">
-        <div className="imagesection">
-          <FadeIn>
-            <Image
-              src="/main_phone.png"
-              width={313}
-              height={568}
-              style={{ width: "100%", height: "auto" }}
-              alt="Filippo Rivolta Fantasia Iphone"
-            />
-          </FadeIn>
-        </div>
-        <div className="text-section mt-12">
-          <Head />
-        </div>
-      </section>*/}
     </main>
   );
 }
