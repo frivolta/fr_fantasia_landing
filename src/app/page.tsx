@@ -5,6 +5,7 @@ import { StickyImageBlock } from "./widgets/home/StickyImageBox/StickyImageBlock
 import { Mockup } from "./components/Mockup/Mockup";
 import { useRef } from "react";
 import { Spacing } from "./components/Spacing/Spacing";
+import { Backgrounds } from "./components/Backgrounds/Backgrounds";
 export default function Home() {
   const initiMockupAnimationRef = useRef<HTMLDivElement>(null);
 
@@ -13,8 +14,7 @@ export default function Home() {
       className="flex flex-col justify-between"
       ref={initiMockupAnimationRef}
     >
-      <div className="radial-background-contrast" />
-      <div className="radial-background-colorful" />
+      <Backgrounds />
       <div className="z-50">
         {/*Header Section*/}
         <div className="pt-32 lg:pt-24">

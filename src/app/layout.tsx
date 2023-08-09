@@ -23,7 +23,7 @@ export default async function RootLayout({
       <body className={inter.className}>
         <header className="flex justify-center md:justify-between align-middle p-8 md:p-12 z-10">
           <LogoFr />
-          <div className="hidden md:flex md:gap-4">
+          <div className="hidden md:flex md:gap-4 z-50">
             <MainButton
               text={BUTTON_URLS.APP_STORE.label}
               iconUrl={BUTTON_URLS.APP_STORE.icon}
