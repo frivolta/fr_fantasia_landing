@@ -5,14 +5,14 @@ import styles from "./StickyImageBlock.module.scss";
 import { useStickyAnimation } from "./hooks/useStickyAanimation";
 import MainButton from "@/app/components/Button/MainButton";
 import classNames from "classnames";
-import Image from "next/image";
 import { BUTTON_URLS } from "@/consts/urls";
 
 interface StickyImageBlockProps {
   alt?: boolean;
+  text: string;
 }
 
-export const StickyImageBlock = ({ alt }: StickyImageBlockProps) => {
+export const StickyImageBlock = ({ alt,text }: StickyImageBlockProps) => {
   const ref = useRef<HTMLDivElement>(null);
   useStickyAnimation(ref);
   const className = classNames(styles.StickyImageBlock, {
@@ -22,8 +22,7 @@ export const StickyImageBlock = ({ alt }: StickyImageBlockProps) => {
     <motion.div>
       <div className="sticky overflow-hidden top-4">
         <h2 className="text-primary">
-          Should be sticky, the frontend embodies responsiveness and visual
-          appeal.
+          {text}
         </h2>
         <div className="flex mt-10 items-start mx-auto gap-4">
           <MainButton

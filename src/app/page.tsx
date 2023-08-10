@@ -6,6 +6,7 @@ import { Mockup } from "./components/Mockup/Mockup";
 import { useRef } from "react";
 import { Spacing } from "./components/Spacing/Spacing";
 import { Backgrounds } from "./components/Backgrounds/Backgrounds";
+import { TEXTS } from "@/consts/texts";
 export default function Home() {
   const initiMockupAnimationRef = useRef<HTMLDivElement>(null);
 
@@ -26,31 +27,35 @@ export default function Home() {
         </div>
         {/*Sticky Section*/}
         <div className="mt-8">
-          <StickyImageBlock />
+          <StickyImageBlock 
+            text= {TEXTS.imageHeadlines[0]}
+          />
         </div>
         <div className="mt-8 md:mt-32">
-          <StickyImageBlock alt />
+          <StickyImageBlock alt 
+            text= {TEXTS.imageHeadlines[1]}
+          />
         </div>
         <div className="mt-8 md:mt-32">
-          <StickyImageBlock />
+          <StickyImageBlock 
+            text= {TEXTS.imageHeadlines[2]}
+          />
         </div>
         {/*Secondary Title Section*/}
         <div className="mt-24">
           <Spacing>
             <div className="textblock text-primary lg:mb-20">
               <h1 className="text-primary">
-                From Blueprint to Build.{" "}
+                {TEXTS.scrollingTextHeader}{" "}
                 <span className="text-primaryDark">
-                  The Evolution and lifecycle of a Creative Endeavor.
+                  {TEXTS.scrollingTextHeaderSpan}
                 </span>
               </h1>
             </div>
             {/*Plain Text Blocks Section*/}
-            <PlainTextBlock />
-            <PlainTextBlock />
-            <PlainTextBlock />
-            <PlainTextBlock />
-            <PlainTextBlock />
+            {TEXTS.scrollingTexts.map((text, index) => (
+              <PlainTextBlock key={index} text={text} />
+            ))}
           </Spacing>
         </div>
       </div>

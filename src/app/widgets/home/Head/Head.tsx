@@ -4,6 +4,7 @@ import Image from "next/image";
 import { forwardRef } from "react";
 import styles from "./Head.module.scss";
 import { BUTTON_URLS } from "@/consts/urls";
+import {TEXTS} from "@/consts/texts";
 const Head = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <div className={styles.Head}>
@@ -20,9 +21,9 @@ const Head = forwardRef<HTMLDivElement>((_, ref) => {
       <FadeIn>
         <div>
           <h1 className="text-primary">
-            From Blueprint to Build.{" "}
+            {TEXTS.headingText}
             <span className="text-primaryDark">
-              The Evolution and lifecycle of a Creative Endeavor.
+              {TEXTS.headingSpan}
             </span>
           </h1>
         </div>
