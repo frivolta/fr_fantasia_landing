@@ -27,18 +27,22 @@ export default function Home() {
         </div>
         {/*Sticky Section*/}
         <div className="mt-8">
-          <StickyImageBlock 
-            text= {TEXTS.imageHeadlines[0]}
+          <StickyImageBlock
+            imgUrl="/fantasia_story.png"
+            text={TEXTS.imageHeadlines[0]}
           />
         </div>
         <div className="mt-8 md:mt-32">
-          <StickyImageBlock alt 
-            text= {TEXTS.imageHeadlines[1]}
+          <StickyImageBlock
+            imgUrl="/fantasia_general.png"
+            alt
+            text={TEXTS.imageHeadlines[1]}
           />
         </div>
         <div className="mt-8 md:mt-32">
-          <StickyImageBlock 
-            text= {TEXTS.imageHeadlines[2]}
+          <StickyImageBlock
+            imgUrl="/fantasia_create.png"
+            text={TEXTS.imageHeadlines[2]}
           />
         </div>
         {/*Secondary Title Section*/}

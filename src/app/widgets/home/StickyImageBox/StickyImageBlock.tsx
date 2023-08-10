@@ -6,13 +6,19 @@ import { useStickyAnimation } from "./hooks/useStickyAanimation";
 import MainButton from "@/app/components/Button/MainButton";
 import classNames from "classnames";
 import { BUTTON_URLS } from "@/consts/urls";
+import Image from "next/image";
 
 interface StickyImageBlockProps {
   alt?: boolean;
   text: string;
+  imgUrl: string;
 }
 
-export const StickyImageBlock = ({ alt,text }: StickyImageBlockProps) => {
+export const StickyImageBlock = ({
+  alt,
+  text,
+  imgUrl,
+}: StickyImageBlockProps) => {
   const ref = useRef<HTMLDivElement>(null);
   useStickyAnimation(ref);
   const className = classNames(styles.StickyImageBlock, {
@@ -21,9 +27,7 @@ export const StickyImageBlock = ({ alt,text }: StickyImageBlockProps) => {
   const textBlock = () => (
     <motion.div>
       <div className="sticky overflow-hidden top-4">
-        <h2 className="text-primary">
-          {text}
-        </h2>
+        <h2 className="text-primary">{text}</h2>
         <div className="flex mt-10 items-start mx-auto gap-4">
           <MainButton
             text={BUTTON_URLS.APP_STORE.label}
@@ -43,8 +47,8 @@ export const StickyImageBlock = ({ alt,text }: StickyImageBlockProps) => {
   );
   const imageBlock = () => (
     <div className={styles.StickyImageBlock__ImageContainer}>
-      <img
-        src="/phone.png"
+      <Image
+        src={imgUrl}
         height={854}
         className={styles.StickyImageBlock__Image}
         width={421}

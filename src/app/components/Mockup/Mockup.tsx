@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./Mockup.module.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { RefObject, forwardRef, useRef } from "react";
+import { RefObject, forwardRef } from "react";
 
 export const Mockup = forwardRef<HTMLDivElement, {}>((_, containerRef) => {
   const { scrollYProgress } = useScroll({
