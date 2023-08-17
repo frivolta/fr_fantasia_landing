@@ -7,7 +7,7 @@ export const BUTTON_URLS = {
   },
   NERD_INSIGHTS: {
     label: "Nerd Insights",
-    url: "https://www.notion.so/a985a3d07645449e893013f9154c6b06?v=d7f25031c54d41a1b2b60b528c558137&pvs=4",
+    url: "https://diamond-bear-e4e.notion.site/a985a3d07645449e893013f9154c6b06?v=d7f25031c54d41a1b2b60b528c558137&pvs=4",
     icon: "terminal-outline.svg",
     iconAlt: "terminal-outlineAlt.svg",
   },
